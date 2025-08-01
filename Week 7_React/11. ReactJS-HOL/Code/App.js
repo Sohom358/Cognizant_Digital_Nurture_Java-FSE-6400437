@@ -1,0 +1,45 @@
+import React, { useState } from 'react';
+import CurrencyConverter from './CurrencyConverter';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  const handleIncrement = () => {
+    increment();
+    sayHello("Hello from Increment!");
+  };
+
+  const increment = () => {
+    setCount(prev => prev + 1);
+  };
+
+  const decrement = () => {
+    setCount(prev => prev - 1);
+  };
+
+  const sayHello = (message) => {
+    alert(message);
+  };
+
+  const sayWelcome = (msg) => {
+    alert(msg);
+  };
+
+  const handleClick = () => {
+    alert("I was clicked");
+  };
+
+  return (
+    <div className="App">
+      <h1>{count}</h1>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={() => sayWelcome("Welcome")}>Say welcome</button>
+      <button onClick={handleClick}>Click on me</button>
+
+      <CurrencyConverter />
+    </div>
+  );
+}
+
+export default App;
