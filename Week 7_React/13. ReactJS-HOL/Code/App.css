@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.section {
+  border-left: 2px solid green;
+  padding-left: 20px;
+}
